@@ -93,8 +93,32 @@ komudu ile matematik dizinini dersler dizinine taşımış olduk.
 
 Dosya ve Dizinleri Yeniden Adlandırma
 
+mv ogrenci-belgesi.pdf mezun-belgesi.pdf
+
+mv fizik-kitap.pdf fizik/kitap.pdf
+
+dizin ismi değiştirme:
+mv dersler/ tumdersler/
 
 
+Dosya ve Dizinleri Arşivleme-Çıkarma
+
+Arşiv dediğimiz şey, dosyaları ve dizinleri tek bir dosya halinde sıkıştırılmış bir vaziyette bir dosyanın içinde tutma işlemidir.
+rar, zip, tar, 7z, bu arşiv uzantıları tanıdık gelecektir.
+
+tar -zcvf arsiv1.tar dersprogrami.xls 
+
+tar -zcvf arsiv2.tar mezun-belgesi.pdf yeniprogram.xls
+arşivleme işlemi sırasında eski dosyalar kaybolmaz veya silinmez, yeni oluşan arşiv dosyasının içerisine kopyalanır.
+
+Bir dizini arşivlemek
+
+tar -zcvf fizik.tar fizik/
+
+
+Arşivi çıkarmak
+
+tar -zxvf arsiv1.tar
 
 
 
