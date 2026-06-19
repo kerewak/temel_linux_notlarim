@@ -75,3 +75,26 @@ cp /home/kerem/odevler/yeniprogram.xls /tmp/eskiprogram.xls
 cp -r matematik/ dersler/
 bir dizini kopyalamak için bunu -r parametresi ile rekursif bir şekilde yapmalıyız.
 
+Dosya ve Dizinleri Taşıma
+
+mv tasınacak_dosya tasınacak_yer
+
+mv 'mat soruları.docx' matematik/
+
+mv komudu ile birden fazla dosyayı bir dizinin altına taşıyabiliriz.
+
+ls -al matematik/ 
+komudu ile odevler dizinindeyken o dizinin içerisindeki matematik dizininin içerisini listelemiş olduk.
+
+mv matematik/ dersler/
+komudu ile matematik dizinini dersler dizinine taşımış olduk.
+
+
+
+Dosya ve Dizinleri Yeniden Adlandırma
+
+
+
+
+
+
