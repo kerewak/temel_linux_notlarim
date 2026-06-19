@@ -121,4 +121,42 @@ Arşivi çıkarmak
 tar -zxvf arsiv1.tar
 
 
+Nano, terminal üzerinde çalışan bir text editor. Bir metin düzenleyicisi ile dosyanın içerisine herhangi bir metin yazabilir, o metini düzenleyebilir ve kaydetmek istediğimiz şekilde kaydedebiliriz.
+
+nano dosya.txt
+yazdıktan sonra ctrl + X ile kaydedebiliriz.
+
+cat dosya.txt
+dosyayı okumak için cat komutunu kullanıyoruz
+
+dosyayı nano ile tekrar düzenleyip ctrl + O yaparak dosyayı farklı bir isimde kaydedebiliriz.
+
+Nano ile çok daha büyük dosyalar, log dosyaları, sistem dosyaları veya belgelerde işimize yarayacak bir özellik dosya içerisinde arama.
+ctrl + W ile arama yapabiliriz.
+
+
+Diğer metin düzenleyiciler
+
+vim ve GUI olan gedit uygulaması, bunların yanı sıra bir çok metin editörü yüklenip kullanılabilir.
+vim, linux üzeirnde uygulama geliştiren veya sistem yöneticileri tarafından çok sıkca kullanılır.
+vim'de bir kod dosyası açıyorsak vim o dosyayı çalıştırabilme imkanı sağlar, kodun içeriğini syntaxına göre renklendirebilir ve çeşitli komutları beraberinde getirir.
+vim'de yazı yazarken aynı zamanda komut çalıştırabiliriz.
+vi dosya.txt
+
+: ile komut satırı moduna geçer.
+vim'den çıkmak için :qa yazıp çıkarız.
+
+gedit
+
+gedit dosya.txt
+
+
+
+
+
+
+
+
+
+
 
