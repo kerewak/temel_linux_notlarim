@@ -152,6 +152,22 @@ gedit dosya.txt
 
 
 
+Dosyaları Okuma
+
+cat (concatenate) ile birden fazla dosyayı aynanda okuyabiliriz.
+
+cat dosya.txt kelimeler.txt
+
+satır sayılarını görüntülemek için -n parametresini kullanırız.
+
+
+
+
+
+
+
+
+
 
 
 
