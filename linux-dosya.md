@@ -158,20 +158,130 @@ cat (concatenate) ile birden fazla dosyayı aynanda okuyabiliriz.
 
 cat dosya.txt kelimeler.txt
 
+
+cat -n 1a-liste.txt
 satır sayılarını görüntülemek için -n parametresini kullanırız.
 
+cat -E 1a-liste.txt
+satır sonlarını işaretleme parametresi, dolar işaretiyle satır sonlarını işaretler.
+
+
+tac 1a-liste.txt
+tac komutu, cat'in tersten yazılmış halidir, bir listenin satırlarını sondan başa doğru göstermemizi sağlar.
+
+
+head tumliste.txt
+head komutu, bir dosyanın ilk satırlarını ekrana yazdırır.
+ilk on satırını okur.
+
+head -n5 tumliste.txt
+baştan kaç satır okunacağını belirleyebiliriz,
+
+tail tumliste.txt
+tail komutu, bir dosyanın son satırlarını ekrana yazdırır.
+son on satırını okur.
+
+tail -n2 tumliste.txt
+sondan kaç satır okunacağını belirleyebiliriz.
+
+//-n parametresindeki n number manasına gelir.
+
+
+tail komutu dosyaları canlı olarak izleyebilir.
+tail -f tumliste.txt
+
+yeni bir terminal açıp aynı dizine gidelim,
+echo "klara" >> tumliste.txt
+dosyanın sonuna eklediğimiz bu yeni satır anlık olarak okunur ve dosyanın sonuna listelenir. Özellikle log dosyalarının yani sistem kayıtlarını okurken
+tail -f parametresi çokça işimize yarar.
+
+
+more istiklalmarsi.txt
+more komutu, terminal ekranına sığmayan metinleri okumayı kolaylaştırır. Enter tuşuna basarak metni aşağıya doğru okuyabiliriz.
+Çıkmak için Q tuşuna basarız.
+
+
+nl istiklalmarsi.txt
+nl komutu, boş olan satırlar hariç diğer satırlara satır numarası ekler.
 
 
 
+Dosyalar Hakkında Bilgi Alma
+
+Dosyaları açmadan o dosyalar hakkında bilgi toplayabiliriz.
+
+file istiklalmarsi.txt
+
+ls -la komutu ile ll komutu benzerdir.
 
 
+wc (word count) bize dosya hakkında belirli bilgiler verir. İlk sayı satır sayısı,
+ikincisi kelime sayısı, üçüncüsü byte cinsinden boyutunu verir.
+
+wc -w tumliste.txt
+-w parametresi ile sadece kelime sayısını verir.
+
+wc -l tumliste.txt
+-l parametresi ile sadece satır sayısını verir.
+
+wc -c tumliste.txt
+-c parametresi ile sadece byte sayısını verir.
+
+wc -L tumliste.txt
+en uzun satırın boyutunu verir.
 
 
+--Dosyaları Sıralama--
+
+sort komutu, dosyaları sıralamamızı sağlar.
+sort 1a-liste.txt
+
+sıralama işlemi yaparken neye göre sıralayacağımızı belirleyebiliriz.
+
+sort -k 2 tumliste.txt
+-k (key) parametresi, dosyaları belirttiğimiz sütundan sıralamamızı sağlar.
+
+sort -c tumliste.txt
+-c parametresi, bir listenin sıralı olup olmadığını öğrenmemizi sağlar.
+Sırayı bozan satırı kontrol ederiz.
+
+sort -r tumliste.txt
+-r parametresi ile listeyi tersten sıralamamızı sağlar.
 
 
+sort -r k2 tumliste.txt
+ile hem isme göre hem de tersten sıralamış olduk.
+
+sort -rk2 tumliste.txt -o sirali.txt
+-o parametresi bir listenin sıralamasını kaydetmemizi sağlar.
 
 
+listeyi karıştırıp görmek istiyorsak:
+sort -R sirali.txt
+-R (Random) parametresi
 
+
+--Dosya İçinde Arama--
+
+grep 'a' tumliste.txt
+grep komutu, dosya içerisinde arama yapmamızı sağlar.
+
+grep -v 'a' tumliste.txt
+-v parametresi ile aradığımız ifadenin bulunmadığı satırları görürüz.
+
+grep -i 'a' tumliste.txt
+-i parametresini, büyük-küçük harf duyarlılığını ortadan kaldırmak için kullanırız.
+
+
+grep -i 'e' tumliste.txt 1a-liste.txt 2a-liste.txt sirali.txt
+grep ile birçok dosya içerisinde de arama yapabiliriz.
+
+
+grep -i 'a' -l tumliste.txt 1a-liste.txt
+-l parametresi, aradığımız kelimenin yazdığımız hangi dosyalarda bulunup bulunmadığını gösterir.
+
+grep -i 'vatan' -c istiklalmarsi.txt
+-c parametresi ile verdiğimiz kelimenin dosyada kaç kez geçtiğini gösterir.
 
 
 
