@@ -64,6 +64,25 @@ ve kullanılmamaktadır.
 root kullanıcısında parola bölümünde hash bulunmuyor ! karakteri bulunuyor. ! karakteri bu kullanıcıya parolayla giriş yapılmanın mümkün olmadığını ifade eder.
 
 
+--Kullanıcı Ekleme--
+Kullanıcı eklemek için kullanabileceğimiz iki yöntem var.
+Kullanıcı işlemleri için root haklarına sahip olmalıyız. (sudo)
+
+sudo useradd franz
+
+sudo passwd franz
+
+sudo adduser 
+oluştururken bilgi verir, kişisel bilgi sorar.
+
+
+--Kullanıcı Silme--
+
+sudo deluser sokrates
+
+sudo userdel franz
+
+
 
 
 
