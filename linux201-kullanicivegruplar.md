@@ -56,7 +56,7 @@ Erişemiyoruz çünkü kullanıcı parolaları yer almakta, ancak root yetkisi e
 sudo cat /etc/shadow
 burada yazan parolamız bir özettir. Parolamız bir algoritmadan geçirilerek geri döndürülemez bir şekilde başka bir metne dönüştürülüyor. Bundan parolayı elde etmek çok zordur.
 Parola hash'i $ karakteriyle birbirinden ayrılmıştır. İlk iki dolar arası kısım hangi algoritmanın kullanılarak hashlendiğini ifade eder. İkinci kısım parolaya eklenen bir kelimeyi ifade eder
-amacı parolayı geri döndürülmesini zorlaştırmaktadır (Hashing ve tuzlama methodu). Sonraki kısım ise parolamızın hashidir. Sonraki sütun parolamızın hangi dün değiştiğini ifade eder. 
+amacı parolayı geri döndürülmesini zorlaştırmaktır (Hashing ve tuzlama methodu). Sonraki kısım ise parolamızın hashidir. Sonraki sütun parolamızın hangi gün değiştiğini ifade eder. 
 Sonraki sütunlar parolanın süresini, ne kadar zaman sonra değiştirilmesi gerektiğini ve değiştirilmeden önceki uyarı gününü ifade eder. Sonraki sütunlar başka amaçlar için rezerve edilmiştir
 ve kullanılmamaktadır.
 
@@ -83,6 +83,35 @@ sudo deluser sokrates
 sudo userdel franz
 
 
+--Grupları Listeleme ve Ekleme--
 
+cat /etc/group
+Bu komut ile sistemde tanımlı olan bütün grupları, isimleri ve ID'leriyle beraber görebiliyoruz.
+İlk sütun grup ismi, sonraki sütun eskiden yer alan grup parolası, sonraki sütun grup ID, sonraki sütun virgülle birlikte ayrılmış olan kullanıcılar listeleniyor.
+Bu liste içinde herhangi bir kullanıcı listelenmemiş olanlar, burada sadece ikincil gruptakiler olduğu için. Passwd dosyasında birinciller gözükür.
+(/etc/passwd dizininde 4.sütun, kullanıcıların grup ID'lerini temsil eder.)
+
+Yeni bir grup eklemek için yönetici izinlerine ihtiyacımız var.
+
+sudo addgroup linuxsevenler
+
+
+
+--Grup Silme--
+
+sudo delgroup aile
+
+
+
+--Kullanıcı Gruplarını Yönetme--
+
+sudo aslında yönetici haklarıyla çalışmamızı sağlayan bir programdır.
+
+sudo usermod -a -G linuxsevenler ahmet
+-a (add), -G (grup) anlamına gelir.
+Bu sayede ahmet kullanıcısı linuxsevenler grubuna dahil olmuş oldu.
+
+sudo usermod -a -G linuxsevenler yusuf
+Aynı şekilde yusuf kullanıcısını da linuxsevenler grubuna dahil ettik.
 
 
